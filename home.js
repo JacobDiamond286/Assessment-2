@@ -59,7 +59,7 @@ const canWeDeliver = (zipCode) => {
         console.log(`You are not in our delivery area`)
     }
 }
-// canWeDeliver(85209)
+canWeDeliver(85205)
 
 
 /* 
@@ -83,14 +83,11 @@ const canWeDeliver = (zipCode) => {
 const canWeDeliverTwo = (zipCode) => {
     for(let i = 0; i < deliveryAreaZipCodes.length; i++){
         if(zipCode === deliveryAreaZipCodes[i]){
-            console.log(`You are eligable for delivery`)
-            break;
-        }else{
-        console.log(`You are not in our delivery area`)
+            return console.log(`You are eligable for delivery`)
         }
-    }
+    } return console.log(`You are not eligable for delivery`)
 }
-canWeDeliverTwo(85123)
+canWeDeliverTwo(85205)
 
 
 
@@ -128,8 +125,8 @@ const deals = [
 */
 
 //CODE HERE
-deals.replace(`15% Off!`, `10% Off!`)
-console.log(deals)
+deals[0].title = deals[0].title.replace(`15`, `10`)
+console.log(deals[0])
 
 
 /*
@@ -146,3 +143,5 @@ console.log(deals)
 */
 
 //CODE HERE
+deals[1].desc = deals[1].desc.replace(`March`, `April`).trim()
+console.log(deals[1])
